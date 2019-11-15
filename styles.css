@@ -71,3 +71,9 @@ body {
   transform: rotateX(-90deg) translateZ(100px);
   background: #4455f7;
 }
+
+/* Hover ============================== */
+/* A simple way to animate the cube is to add hover effects. */
+.cube:hover {
+  transform: rotateX(-100deg) rotateY(-100deg) rotateZ(60deg);
+}
