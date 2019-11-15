@@ -8,27 +8,66 @@ body {
     It is important because the height and widht of the cube apply to 3d space. 
     For example, if you have a cube without the wrapper and you rotate it then part of it will be cut off by the screen. 
     So to fix this you use the wrapper to position the cube. If this does not make sense remove the padding wrapper styles and see what happens.
-  */
-  width: 300px;
-  height: 300px;
-  margin: 200px auto;
+    */
 
   /* This is fun to play with but not necessary for a simple cube. The lower the number the more extreme the perspective. */
   /* perspective: 200px; */
+  width: 300px;
+  height: 300px;
+  margin: 200px auto;
 }
 
 /* Cube Default ==============================*/
 .cube {
   width: 200px;
   height: 200px;
-  /* Makes cube 3d.*/
   transform-style: preserve-3d;
-  /* Default Position of cube. This is not necessary but you can play with it. */
+  /* Default Position of cube. */
   transform: rotateY(0deg) rotatex(0deg);
 }
 
 .cube div {
-  /* Height and width of Cube. */
+  /* You need this to make all the divs position relative the the cube element.*/
+  position: absolute;
+  /* This makes all the faces the same height and width as the cube. */
   width: 200px;
   height: 200px;
+}
+
+/* Cube Planes ============================== */
+.front {
+  /* Move forward half the width of the cube. */
+  transform: translateZ(100px);
+  background: #6e79da;
+}
+
+.back {
+  /* Turn all the way around and move back. */
+  /* Note! Once you rotate it the translateZ is applied so it is still positive!!!*/
+  transform: rotateX(180deg) translateZ(100px);
+  background: #0003a7;
+}
+
+.left {
+  /* Flip up and push up. */
+  transform: rotateY(-90deg) translateZ(100px);
+  background: #3e58cc;
+}
+
+.right {
+  /* Flip to right and push sideways. */
+  transform: rotateY(90deg) translateZ(100px);
+  background: #a8c0ff;
+}
+
+.top {
+  /* Flip up and push up. */
+  transform: rotateX(90deg) translateZ(100px);
+  background: #0835ff;
+}
+
+.bottom {
+  /* Flip down and push down. */
+  transform: rotateX(-90deg) translateZ(100px);
+  background: #4455f7;
 }
