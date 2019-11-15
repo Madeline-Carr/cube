@@ -16,3 +16,19 @@ body {
   /* This is fun to play with but not necessary for a simple cube. The lower the number the more extreme the perspective. */
   /* perspective: 200px; */
 }
+
+/* Cube Default ==============================*/
+.cube {
+  width: 200px;
+  height: 200px;
+  /* Makes cube 3d.*/
+  transform-style: preserve-3d;
+  /* Default Position of cube. This is not necessary but you can play with it. */
+  transform: rotateY(0deg) rotatex(0deg);
+}
+
+.cube div {
+  /* Height and width of Cube. */
+  width: 200px;
+  height: 200px;
+}
