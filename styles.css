@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+
+/* Wrapper ============================== */
+.wrapper {
+  /* This creates a box that will position the cube. 
+    It is important because the height and widht of the cube apply to 3d space. 
+    For example, if you have a cube without the wrapper and you rotate it then part of it will be cut off by the screen. 
+    So to fix this you use the wrapper to position the cube. If this does not make sense remove the padding wrapper styles and see what happens.
+  */
+  width: 300px;
+  height: 300px;
+  margin: 200px auto;
+
+  /* This is fun to play with but not necessary for a simple cube. The lower the number the more extreme the perspective. */
+  /* perspective: 200px; */
+}
